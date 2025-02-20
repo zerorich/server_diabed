@@ -6,7 +6,6 @@ const app = express();
 app.use(express.json()); // Позволяет парсить JSON в запросах
 
 app.use("/users", userRoutes); // Подключение маршрутов пользователей
-import dns from 'dns';
 
 // Подключение к MongoDB
 mongoose.connect("mongodb+srv://zerorich207:zerorich207aliasi@cluster0.julfn.mongodb.net/", {
