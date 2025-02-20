@@ -6,6 +6,15 @@ const app = express();
 app.use(express.json()); // Позволяет парсить JSON в запросах
 
 app.use("/users", userRoutes); // Подключение маршрутов пользователей
+import dns from 'dns';
+
+dns.lookup(require('os').hostname(), (err, address) => {
+    if (err) {
+        console.error('Ошибка получения IP:', err);
+    } else {
+        console.log('IP-адрес сервера:', address);
+    }
+});
 
 // Подключение к MongoDB
 mongoose.connect("mongodb+srv://zerorich207:zerorich207aliasi@cluster0.julfn.mongodb.net/", {
