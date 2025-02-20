@@ -8,7 +8,7 @@ app.use(express.json()); // Позволяет парсить JSON в запро
 app.use("/users", userRoutes); // Подключение маршрутов пользователей
 
 // Подключение к MongoDB
-mongoose.connect("mongodb+srv://zerorich207:4GJTyXegcznItQD6@cluster0.julfn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+mongoose.connect("mongodb+srv://zerorich207:zerorich207aliasi@cluster0.julfn.mongodb.net/", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log("✅ Connected to MongoDB"))
