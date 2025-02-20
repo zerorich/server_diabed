@@ -8,14 +8,6 @@ app.use(express.json()); // Позволяет парсить JSON в запро
 app.use("/users", userRoutes); // Подключение маршрутов пользователей
 import dns from 'dns';
 
-dns.lookup(require('os').hostname(), (err, address) => {
-    if (err) {
-        console.error('Ошибка получения IP:', err);
-    } else {
-        console.log('IP-адрес сервера:', address);
-    }
-});
-
 // Подключение к MongoDB
 mongoose.connect("mongodb+srv://zerorich207:zerorich207aliasi@cluster0.julfn.mongodb.net/", {
     useNewUrlParser: true,
@@ -25,3 +17,12 @@ mongoose.connect("mongodb+srv://zerorich207:zerorich207aliasi@cluster0.julfn.mon
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+import dns from 'dns';
+
+dns.lookup(require('os').hostname(), (err, address) => {
+    if (err) {
+        console.error('Ошибка получения IP:', err);
+    } else {
+        console.log('IP-адрес сервера:', address);
+    }
+});
